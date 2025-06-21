@@ -62,7 +62,11 @@ timeButtons.forEach((button) => {
 soundButtons.forEach((button) => {
   button.addEventListener("click", () => {
     audio.src = button.dataset.sound;
-    video.src = button.dataset.video;
+    video.querySelector("source").src = button.dataset.video;
+    audio.currentTime = 0;
+    video.currentTime = 0;
+    video.load();
+    audio.load();
     if (isPlaying) {
       audio.play();
       video.play();
@@ -70,4 +74,11 @@ soundButtons.forEach((button) => {
   });
 });
 
+// ⏳ Set initial time
 updateDisplay(duration);
+
+// 📦 Force media to load once DOM is ready
+window.addEventListener("DOMContentLoaded", () => {
+  video.load();
+  audio.load();
+});
