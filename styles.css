@@ -1,10 +1,11 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   font-family: sans-serif;
   background: #000;
@@ -55,30 +56,17 @@ body, html {
   cursor: pointer;
 }
 
-.timer-circle {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
 .time-display {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 28px;
+  font-size: 32px;
   color: white;
 }
 
 .play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%);
+  font-size: 30px;
+  margin-top: 20px;
   background: none;
   border: none;
   color: white;
-  font-size: 40px;
   cursor: pointer;
 }
 
