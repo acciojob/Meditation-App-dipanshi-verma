@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const app = document.getElementById('app');
 const video = document.getElementById('bg-video');
 const sound = document.getElementById('meditation-sound');
